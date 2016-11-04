@@ -3,8 +3,9 @@ require "test/unit"
 
 class TestBubble < Test::Unit::TestCase
 
-  def test_sample
-    assert_equal(4, 2+2)
+  def test_bubble_sort
+    
+    assert_equal([0,2,2,3,4,78], bubble_sort([4,3,78,2,0,2]))
   end
 
 end
