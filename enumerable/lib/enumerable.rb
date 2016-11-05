@@ -1,0 +1,30 @@
+module Enumerable
+  def my_each
+    i = 0
+    while i < self.size
+      yield(self[i])  
+      i+=1      
+    end
+    self
+  end
+  
+  def my_each_with_index
+    i = 0
+    while i < self.size
+      yield(self[i], i)  
+      i+=1      
+    end
+    self
+  end
+  
+  def my_select
+    result = []
+    my_each do |i|
+      if (yield(i))
+        result << i
+      end
+    end
+    result
+  end
+  
+end
