@@ -1,7 +1,7 @@
 require "./lib/enumerable.rb"
-require "test/unit"
+require "minitest/autorun"
 
-class TestEnumerable < Test::Unit::TestCase
+class TestEnumerable < Minitest::Test
 
   def test_my_each
     arr = Array.new [1, 2, 3]
